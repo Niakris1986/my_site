@@ -8,3 +8,7 @@ def get_post(request, name_post: str):
         return HttpResponse('информация о блоге charmander')
     else:
         return HttpResponseNotFound('страница не найдена')
+
+
+def get_post_by_number(request, name_post: int):
+    return HttpResponse(f'номер поста - {name_post}')
